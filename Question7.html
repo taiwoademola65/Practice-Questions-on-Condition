@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input id="weight" type="number" placeholder="Enter the weight of the luggage">
+  <button onclick="check()">Check</button>
+  <div id="display"></div>
+</body>
+<script>
+  function check() {
+    let w = weight.value
+    if (w == '') {
+      display.innerHTML = 'input cannot be empty'
+    } else if (w < 20) {
+      display.innerHTML = `<p style="color: red;"> The weight of your luggage is ${w}kg, Underweight</p>`
+    } else if (w >= 20 && w <= 30) {
+      display.innerHTML = `<p style="color: green;"> The weight of your luggage is ${w}kg, Allowed</p>`
+    } else if (w > 30) {
+      display.innerHTML = `<p style="color: red;"> The weight of your luggage is ${w}kg, Overweight</p>`
+
+    }
+  }
+</script>
+
+</html>

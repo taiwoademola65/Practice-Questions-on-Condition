@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="error"></div>
+    <input id="weight" type="number" placeholder="Enter your body weight in kilogram">
+    <input id="height" type="number" placeholder="Enter your body height in kilogram">
+    <button onclick="check()">Calculate the BMI</button>
+    <div id="display"></div>
+</body>
+<script>
+    function check() {
+        let w = weight.value
+        let h = height.value
+        let BMI = w / (h ** 2)
+        console.log(BMI);
+        if (w == '' || h == '') {
+            error.innerHTML = 'input cannot be empty'
+        } else {
+            error.style.display = 'none'
+            if (BMI < 18.5) {
+                display.innerHTML = `<p style="color: red;"> Your BMI is ${BMI}, that means you are Underweight</p>`
+            } else if (BMI >= 18.5 && BMI < 25.0) {
+                display.innerHTML = `<p style="color: green;"> Your BMI is ${BMI}, that means you have Healthy Weight</p>`
+            } else if (BMI >= 25.0 && BMI < 30.0) {
+                display.innerHTML = `<p style="color: red;"> Your BMI is ${BMI}, you are Overweight</p>`
+            } else if (BMI >= 30.0 && BMI < 35.0) {
+                display.innerHTML = `<p style="color: red;"> Your BMI is ${BMI}, Class 1 Obesity</p>`
+            } else if (BMI >= 35.0 && BMI < 40.0) {
+                display.innerHTML = `<p style="color: red;"> Your BMI is ${BMI}, Class 2 (Severe) Obesity</p>`
+            } else if (BMI >= 40) {
+                display.innerHTML = `<p style="color: red;"> Your BMI is ${BMI},Class 3 (Morbid) Obesity</p>`
+
+            }
+
+        }
+
+    }
+</script>
+
+</html>

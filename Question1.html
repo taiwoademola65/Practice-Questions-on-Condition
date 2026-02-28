@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input id="address" type="text" placeholder="Enter the address">
+  <button onclick="submitBtn()">Submit</button>
+  <div id="display"></div>
+</body>
+<script>
+  function submitBtn() {
+    // alert('working')
+    if (address.value == '') {
+      display.innerHTML = `  <p style="color: red;">Input your address</p>`
+    } else {
+      let transformWord = (address.value).toLowerCase()
+      console.log(transformWord)
+      display.innerHTML = ''
+      display.innerHTML = `<p style="color: blue;">Welcome here</p>`
+    }
+  }
+</script>
+
+</html>
+
+

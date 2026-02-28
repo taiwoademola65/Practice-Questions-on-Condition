@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<textarea id="essays" placeholder="Enter your essay here" style="width: 300px; height: 200px;"></textarea>
+<button onclick="submitBtn()">Submit</button>
+</body>
+<script>
+  function submitBtn() {
+    // alert('working')
+    if(essays.value == ''){
+      alert('input cannot be empty')
+    }else {
+      // let noExtraSpacedWord = (essays.value).replace(/\s+/g, ' ');
+      let noExtraSpacedWord = (essays.value).split(' '). filter(word=> word.length > 0).join(' ');
+      console.log(noExtraSpacedWord)
+    }
+  }
+</script>
+</html>

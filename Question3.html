@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="justify-content: center; margin: 10px; text-align: center;">
+    <input id="itemnumber" type="number" placeholder="Enter the number of items">
+    <button onclick="check()">Check</button>
+    <div id="discount"></div>
+  </div>
+</body>
+<script>
+  function check() {
+    let itemNo = itemnumber.value
+    if (itemNo == '') {
+      discount.innerHTML = 'The input cannot be empty'
+    } else {
+      if ((itemNo % 2) == 0) {
+        discount.innerHTML = 'Great, you have some discount'
+      } else if ((itemNo % 2) != 0) {
+        discount.innerHTML = 'Sorry, you do not have any discount. You can add a item to get discount'
+      }
+    }
+
+
+  }
+</script>
+
+</html>
