@@ -4,21 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conditional Practice</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        :root { --bg-a: #e8f0fe; --bg-b: #f7fafc; }
+        body { margin:0; min-height:100vh; background-color: var(--bg-b); color: #1f2937; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif; overflow-x:hidden; }
+        body::before { content: ""; position:fixed; inset:0; background: radial-gradient(circle at 25% 20%, rgba(56, 189, 248, 0.2), transparent 40%), radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.14), transparent 35%); z-index: -1; animation: drift 18s linear infinite; }
+        @keyframes drift { 0% { transform: translate(0px,0px); } 50% { transform: translate(15px,-20px); } 100% { transform: translate(0px,0px); } }
+        .page-wrap { max-width: 1200px; margin: 0 auto; padding: 2.2rem 1rem 3rem; }
+        .page-heading { text-align: center; margin-bottom: 1.8rem; }
+        .page-heading h1 { font-size: 2.4rem; font-weight: 800; color: #0f172a; }
+        .page-heading p { color: #475569; max-width: 680px; margin: 0.7rem auto 0; }
+        .card { border-radius: 1rem; box-shadow: 0 10px 30px rgba(15,23,42,.09); background:#ffffff; padding:1.3rem; border:1px solid #e2e8f0; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; animation: fadeUp .6s cubic-bezier(.17,.55,.55,1) both; }
+        .card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 18px 30px rgba(15,23,42,.18); border-color: #bfdbfe; }
+        .card h1 { font-size: 1.25rem; color: #0f172a !important; margin-bottom: .6rem; }
+        .card p { color: #475569 !important; line-height: 1.52; margin-bottom: .9rem; }
+        .card a { display: inline-flex; align-items: center; justify-content: center; font-weight: 700; border-radius: .65rem; padding: .5rem 1rem; border: 1px solid #0ea5e9; color:#0ea5e9; background:#ffffff; transition:.2s; width: fit-content; text-decoration: none; }
+        .card a:hover { background: #eff6ff; color: #0369a1; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
+    </style>
 </head>
 
 <body>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 lg:gap-8  p-4">
+    <div class="page-wrap">
+        <div class="page-heading">
+            <h1>Level Two Conditional Practice Question</h1>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
 
 
 
         <!-- card  -->
 
 
-        <div class="cont h-81  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-2 text-2xl text-white font-bold ">Question 1 </h1>
-            <p class="p-3 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 1 </h1>
+            <p class="">
                 A delivery company in Aroje is facing complaints about incorrect package sorting due to the use of mixed
                 uppercase and
                 lowercase addresses. You have been employed to develop an algorithm that ensures all address labels are
@@ -27,7 +48,7 @@
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question2.html">Check the Answer Here</a>
             </button>
 
@@ -38,16 +59,16 @@
         <!-- card  -->
 
 
-        <div class="cont h-81  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-4 text-2xl text-white font-bold ">Question 2 </h1>
-            <p class="p-4 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 2 </h1>
+            <p class="">
                 A school in Ado-Ekiti found that students submit essays with multiple spaces between words, making it
                 hard for teachers to grade them. You have been hired to write an algorithm that removes extra spaces
                 from essays while keeping only one space between words.
             </p>
 
             <button
-                class="p-2 ml-5 mt-3 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question2.html">Check the Answer Here</a>
             </button>
 
@@ -58,16 +79,16 @@
         <!-- card  -->
 
 
-        <div class="cont h-81  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-4 text-2xl text-white font-bold ">Question 3 </h1>
-            <p class="p-4 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 3 </h1>
+            <p class="">
                 A grocery store in Taki wants to reward customers who shop for an even number of items. You have been
                 hired to write an algorithm that checks if the number of items in a customer’s cart is even and returns
                 a discount if true.
             </p>
 
             <button
-                class="p-2 ml-5 mt-4 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question3.html">Check the Answer Here</a>
             </button>
 
@@ -79,9 +100,9 @@
         <!-- card  -->
 
 
-        <div class="cont h-78  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-2 text-2xl text-white font-bold ">Question 4 </h1>
-            <p class="p-4 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 4 </h1>
+            <p class="">
                 A weather station in LAUTECH is experiencing issues with its temperature recording system. The system
                 needs to
                 categorise temperatures as 'Cold' (below 19°C), 'Warm' (20°C to 28°C), or 'Hot' (above 28°C). Write an
@@ -90,7 +111,7 @@
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question4.html">Check the Answer Here</a>
             </button>
 
@@ -100,9 +121,9 @@
         <!-- card  -->
 
 
-        <div class="cont h-78  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-2 text-2xl text-white font-bold ">Question 5 </h1>
-            <p class="p-3 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 5 </h1>
+            <p class="">
                 SQI clinic is developing a system to calculate the Body Mass Index (BMI) of patients. You have been
                 asked to
                 write
@@ -113,7 +134,7 @@
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question5.html">Check the Answer Here</a>
             </button>
 
@@ -125,16 +146,16 @@
         <!-- card  -->
 
 
-        <div class="cont h-78  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-2 text-2xl text-white font-bold ">Question 6 </h1>
-            <p class="p-4 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 6 </h1>
+            <p class="">
                 A gaming company in Abuja has noticed players creating usernames with spaces and special characters,
                 which causes issues in their database. You have been tasked to write a function that validates usernames
                 by ensuring they contain only letters, numbers, and underscores.
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="question6.html">Check the Answer Here</a>
             </button>
 
@@ -146,9 +167,9 @@
         <!-- card  -->
 
 
-        <div class="cont h-78  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-2 text-2xl text-white font-bold ">Question 7 </h1>
-            <p class="p-2 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 7 </h1>
+            <p class="">
                 An airline in Kano needs an algorithm to determine if a passenger’s luggage is overweight. The algorithm
                 should
                 take the luggage weight as input and return 'Underweight', 'Allowed', or 'Overweight' based on the
@@ -157,7 +178,7 @@
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question7.html">Check the Answer Here</a>
             </button>
 
@@ -168,16 +189,16 @@
         <!-- card  -->
 
 
-        <div class="cont h-78  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-4 text-2xl text-white font-bold ">Question 8 </h1>
-            <p class="p-4 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 8 </h1>
+            <p class="">
                 Obafemi Awolowo University is building a student portal where only emails ending with "@oauife.edu.ng"
                 are allowed for registration. Write a function that checks if an email address ends with the correct
                 domain and returns true or false.
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question8.html">Check the Answer Here</a>
             </button>
 
@@ -189,9 +210,9 @@
         <!-- card  -->
 
 
-        <div class="cont h-78  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-4 text-2xl text-white font-bold ">Question 9 </h1>
-            <p class="p-4 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 9 </h1>
+            <p class="">
                 A secondary school in Enugu wants to automate their grading system. Write a function that takes a
                 student's score (0-100) and returns their grade based on these criteria:
                 70-100: A (Excellent)
@@ -202,16 +223,16 @@
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question9.html">Check the Answer Here</a>
             </button>
 
         </div>
 
 
-        <div class="cont h-78  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-4 text-2xl text-white font-bold ">Question 10 </h1>
-            <p class="p-4 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 10 </h1>
+            <p class="">
                 A supermarket in Port Harcourt offers discounts based on purchase amount. Write a function that
                 calculates the final price after a discount:
                 Below ₦5,000: No discount
@@ -221,16 +242,16 @@
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question10.html">Check the Answer Here</a>
             </button>
 
         </div>
 
 
-        <div class="cont h-78  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-2 text-2xl text-white font-bold ">Question 11 </h1>
-            <p class="p-4 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 11 </h1>
+            <p class="">
                 A university in Katangua requires a minimum JAMB score for different courses. Write a function that
                 takes a student's JAMB score and course choice, then returns if they are eligible:
                 Medicine: 280 and above
@@ -240,16 +261,16 @@
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question11.html">Check the Answer Here</a>
             </button>
 
         </div>
 
 
-        <div class="cont h-78  rounded-lg bg-blue-800 shadow shadow-xl ">
-            <h1 class="p-4 text-2xl text-white font-bold ">Question 12 </h1>
-            <p class="p-4 pt-0 text-white text-sm text-justify">
+        <div class="cont card">
+            <h1 class="">Question 12 </h1>
+            <p class="">
                 INEC is developing a voter registration system. Write a function that takes a person's birth year and
                 determines if they are eligible to vote (18 years or older in 2026). The function should also return how
                 many years until they can vote if they're not eligible yet.
@@ -257,7 +278,7 @@
             </p>
 
             <button
-                class="p-2 ml-5 flex gap-1 rounded-md transition-transform duration-300 ease-in-out hover:scale-105  font-bold  bg-white  text-blue-600 hover:text-blue-900">
+                class="">
                 <a href="Question12.html">Check the Answer Here</a>
             </button>
 
@@ -272,3 +293,5 @@
 </body>
 
 </html>
+
+
